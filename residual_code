@@ -1,0 +1,15 @@
+set terminal qt
+set logscale y
+set grid
+
+set xlabel "Iteration"
+set ylabel "Residual"
+set title "OpenFOAM Residuals"
+
+plot \
+"logs/Ux_0" u 1:2 w l lw 2 title "Ux", \
+"logs/Uy_0" u 1:2 w l lw 2 title "Uy", \
+"logs/Uz_0" u 1:2 w l lw 2 title "Uz", \
+"logs/p_0"  u 1:2 w l lw 2 title "p"
+
+pause mouse close
